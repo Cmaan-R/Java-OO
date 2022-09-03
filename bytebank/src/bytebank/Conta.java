@@ -11,12 +11,14 @@ public class Conta {
 		this.saldo = saldo + valor;
 	}
 
-	public void saca(double valor) {
-		if (saldo > valor) {
+	public boolean saca(double valor) {
+		if (saldo >= valor) {
 			this.saldo = saldo - valor;
 			System.out.println("Operação Realizada Com Sucesso!");
+			return true;
 		} else {
 			System.out.println("Valor Indisponível: " + valor + " \n O Seu Saldo Atual é :" + saldo);
+			return false;
 		}
 
 	}

@@ -10,7 +10,9 @@ public class TestaMetodo {
 
 		System.out.println(contaCliente1.saldo);
 
-		contaCliente1.saca(350);
+		boolean conseguiuRetirar = contaCliente1.saca(255);
+		
+		System.out.println(conseguiuRetirar);
 	}
 
 }
