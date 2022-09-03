@@ -10,9 +10,21 @@ public class TestaMetodo {
 
 		System.out.println(contaCliente1.saldo);
 
-		boolean conseguiuRetirar = contaCliente1.saca(255);
-		
-		System.out.println(conseguiuRetirar);
+		boolean conseguiuRetirar = contaCliente1.saca(50);
+
+		System.out.println(conseguiuRetirar + " " + contaCliente1.saldo);
+
+		Conta contaCliente2 = new Conta();
+		contaCliente2.deposita(1000);
+
+		if(contaCliente2.transfere(300, contaCliente1, contaCliente2)) {
+			System.out.println("Transferência Realizada Com Sucesso");
+		} else {
+			System.out.println("Transferência Não Concluída : Valor Indisponível Na Conta!");
+		}
+		System.out.println(contaCliente2.saldo);
+		System.out.println(contaCliente1.saldo);
+
 	}
 
 }
