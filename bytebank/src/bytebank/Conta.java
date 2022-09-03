@@ -8,12 +8,12 @@ public class Conta {
 	String titular;
 
 	public void deposita(double valor) {
-		this.saldo = saldo + valor;
+		this.saldo += valor;
 	}
 
 	public boolean saca(double valor) {
 		if (saldo >= valor) {
-			this.saldo = saldo - valor;
+			this.saldo -= valor;
 			System.out.println("Operação Realizada Com Sucesso!");
 			return true;
 		} else {
