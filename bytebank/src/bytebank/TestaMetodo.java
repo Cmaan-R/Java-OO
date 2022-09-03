@@ -17,7 +17,9 @@ public class TestaMetodo {
 		Conta contaCliente2 = new Conta();
 		contaCliente2.deposita(1000);
 
-		if(contaCliente2.transfere(300, contaCliente1, contaCliente2)) {
+		boolean sucessoTransferencia = contaCliente2.transfere(300, contaCliente1, contaCliente2);
+
+		if (sucessoTransferencia) {
 			System.out.println("Transferência Realizada Com Sucesso");
 		} else {
 			System.out.println("Transferência Não Concluída : Valor Indisponível Na Conta!");
