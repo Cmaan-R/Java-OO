@@ -24,9 +24,16 @@ public class TestaMetodo {
 		} else {
 			System.out.println("Transferência Não Concluída : Valor Indisponível Na Conta!");
 		}
+		 
 		System.out.println(contaCliente2.saldo);
 		System.out.println(contaCliente1.saldo);
 
+		contaCliente1.titular = "Paulo Silveira";
+		contaCliente2.titular = "Ana Beatriz";
+		
+		System.out.println(contaCliente1.titular);
+		System.out.println(contaCliente2.titular);
+		
 	}
 
 }
