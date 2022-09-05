@@ -7,7 +7,12 @@ public class Conta {
 	private Cliente titular;
 
 	public void deposita(double valor) {
-		this.saldo += valor;
+		if(valor >= 0) {
+			this.saldo += valor;
+		} else {
+			System.out.println("O Valor Do Saldo Deve Ser Positivo!");
+		}
+			
 	}
 
 	public boolean saca(double valor) {
