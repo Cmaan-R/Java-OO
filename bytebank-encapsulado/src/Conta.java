@@ -5,14 +5,14 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
-	private int total;
+	private static int total;
 
 	public Conta(int agencia, int numero) {
-		total++;
-		System.out.println("O Total de Contas é : " + total);
+		total++; // Conta.total++;
+//		System.out.println("O Total de Contas é : " + total);
 		this.numero = numero;
 		this.agencia = agencia;
-		System.out.println("Estou criando uma conta " + this.numero);
+//		System.out.println("Estou criando uma conta " + this.numero);
 
 	}
 
@@ -40,8 +40,8 @@ public class Conta {
 	public boolean transfere(double valor, Conta destino, Conta origem) {
 		if (this.saldo >= valor) {
 			origem.saca(valor);
-//Pode ser feito dessa forma = this.saldo -+ valor;
-//Pode ser feito dessa forma = destino.saldo += valor; 
+			// Pode ser feito dessa forma = this.saldo -+ valor;
+			// Pode ser feito dessa forma = destino.saldo += valor;
 			destino.deposita(valor);
 			return true;
 		} else {
@@ -85,6 +85,10 @@ public class Conta {
 
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
+	}
+	
+	public int getTotal() {
+		return Conta.total;
 	}
 
 }
