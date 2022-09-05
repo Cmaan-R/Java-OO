@@ -10,7 +10,7 @@ public class TesteSacaNegativo {
 		
 		c.saca(101);
 
-		System.out.println(c.pegaSaldo());
+		System.out.println(c.getSaldo());
 		
 		
 		
