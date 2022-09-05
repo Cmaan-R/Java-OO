@@ -86,8 +86,8 @@ public class Conta {
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
-	
-	public int getTotal() {
+
+	public static int getTotal() {
 		return Conta.total;
 	}
 
