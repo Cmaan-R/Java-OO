@@ -16,16 +16,16 @@ public class TestaGetESet {
 		System.out.println(conta.getTitular().getNome());
 
 		conta.getTitular().setProfissao("Programador");
-		//Agora em duas linhas:
-		
+		// Agora em duas linhas:
+
 //		Cliente titularDaConta = conta.getTitular();
 //		titularDaConta.setProfissao("Programador");
-		
+
 //		Também Poderia Ser Dessa Forma
 //		paulo.setProfissao("Programador");
-		
+
 		System.out.println(conta.getTitular().getProfissao());
-		
+
 	}
 
 }
