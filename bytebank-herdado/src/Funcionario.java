@@ -3,7 +3,7 @@ public class Funcionario {
 
 	private String nome;
 	private String cpf;
-	private Double salario;
+	private double salario;
 
 	public Funcionario() {
 
