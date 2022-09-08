@@ -1,8 +1,8 @@
 //Gerente Herda da Classe Funcionário
-public class Gerente extends Funcionario{
+public class Gerente extends Funcionario {
 
 	private int senha;
-	
+
 	public void setSenha(int senha) {
 		this.senha = senha;
 	}
