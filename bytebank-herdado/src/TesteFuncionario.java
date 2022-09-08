@@ -11,6 +11,7 @@ public class TesteFuncionario {
 
 		System.out.println(f1.getNome() + " " + f1.getBonificacao());
 
+		
 	}
 
 }
