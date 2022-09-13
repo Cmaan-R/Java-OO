@@ -1,4 +1,4 @@
-
+//Não pode isntanciar apartir dessa classe, porque agora é Abstrata
 public abstract class Funcionario {
 
 	private String nome;
@@ -9,9 +9,8 @@ public abstract class Funcionario {
 
 	}
 
-	public double getBonificacao() {
-		return this.salario * 0.05;
-	}
+	//Metódo sem corpo, por ser Abstrato, Não há implementação aqui
+	public abstract double getBonificacao();
 
 	public String getNome() {
 		return nome;
