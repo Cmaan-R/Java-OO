@@ -1,7 +1,7 @@
 
-public class Conta {
+public abstract class Conta {
 
-	private double saldo;
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Cliente titular;
@@ -16,14 +16,7 @@ public class Conta {
 
 	}
 
-	public void deposita(double valor) {
-		if (valor >= 0) {
-			this.saldo += valor;
-		} else {
-			System.out.println("O Valor Do Saldo Deve Ser Positivo!");
-		}
-
-	}
+	public abstract void deposita(double valor);
 
 	public boolean saca(double valor) {
 		if (saldo >= valor) {

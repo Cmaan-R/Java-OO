@@ -5,7 +5,7 @@ public class EditorDeVideo extends Funcionario{
 		System.out.println("Chamando o Método de Bonificação do Editor De Vídeo");
 		return 150;
 	}
-	
+
 	
 	
 
