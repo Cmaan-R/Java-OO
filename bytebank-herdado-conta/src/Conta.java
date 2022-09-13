@@ -38,7 +38,7 @@ public class Conta {
 	}
 
 	public boolean transfere(double valor, Conta destino) {
-		if (this.saldo >= valor) { 
+		if (this.saldo >= valor) {
 			this.saldo -= valor;
 			// Pode ser feito dessa forma = this.saldo -+ valor;
 			// Pode ser feito dessa forma = destino.saldo += valor;
@@ -46,7 +46,7 @@ public class Conta {
 			return true;
 		} else {
 			return false;
-
+		
 		}
 	}
 
