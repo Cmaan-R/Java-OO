@@ -43,7 +43,6 @@ public class Conta {
 			return true;
 		} else {
 			return false;
-
 		}
 	}
 
