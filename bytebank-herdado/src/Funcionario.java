@@ -9,7 +9,7 @@ public abstract class Funcionario {
 
 	}
 
-	//Metódo sem corpo, por ser Abstrato, Não há implementação aqui
+	// Metódo sem corpo, por ser Abstrato, Não há implementação aqui
 	public abstract double getBonificacao();
 
 	public String getNome() {
