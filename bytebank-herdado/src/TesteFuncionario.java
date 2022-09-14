@@ -3,6 +3,8 @@ public class TesteFuncionario {
 
 	public static void main(String[] args) {
 
+		Cliente cliente = new Cliente();
+
 		Gerente f1 = new Gerente();
 
 		f1.setNome("Nico Steppat");
