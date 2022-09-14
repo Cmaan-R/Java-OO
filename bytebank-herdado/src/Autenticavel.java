@@ -1,17 +1,11 @@
+//Contrato Autenticavel
+	//quem assina esse contrato, precisa implementar
+		//método setSenha
+			//método Autentica
+public abstract interface Autenticavel {
 
-public abstract class Autenticavel{
+	public abstract void setSenha(int senha);
 
-	private int senha;
+	public abstract boolean autentica(int senha);
 
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-
-	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 }
