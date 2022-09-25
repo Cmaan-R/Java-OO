@@ -18,25 +18,19 @@ public abstract class Conta {
 
 	public abstract void deposita(double valor);
 
-	public boolean saca(double valor) {
-		if (saldo >= valor) {
-			this.saldo -= valor;
-			System.out.println("Operação Realizada Com Sucesso!");
-			return true;
-		} else {
-			System.out.println("Valor Indisponível: " + valor + " \n O Seu Saldo Atual é :" + saldo);
-			return false;
+	public void saca(double valor) {
+
+		if (saldo < valor) { // Tem um problema?
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor Desejado: " + valor);
 		}
+
+		this.saldo -= valor;
 
 	}
 
-	public boolean transfere(double valor, Conta destino) {
-		if (this.saca(valor)) {
-			destino.deposita(valor);
-			return true;
-		} else {
-			return false;
-		}
+	public void transfere(double valor, Conta destino) {
+		this.saca(valor);
+		destino.deposita(valor);
 	}
 
 	public double getSaldo() {
