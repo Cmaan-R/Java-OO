@@ -10,7 +10,7 @@ public class TesteSaca {
 		try {
 			conta.saca(210.0);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("Erro: " +  e.getMessage());
 		}
 
 		System.out.println(conta.saldo);
