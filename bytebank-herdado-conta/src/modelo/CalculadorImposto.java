@@ -1,5 +1,6 @@
 package modelo;
 
+//modelo.CalculadorImposto => Full Qualified Name
 public class CalculadorImposto {
 	
 	private double totalImposto;
