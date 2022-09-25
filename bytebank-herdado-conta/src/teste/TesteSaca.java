@@ -1,9 +1,10 @@
+package teste;
 
 public class TesteSaca {
 
 	public static void main(String[] args) {
 
-		Conta conta = new ContaCorrente(123, 231);
+		modelo.Conta conta = new modelo.ContaCorrente(123, 231);
 
 		conta.deposita(200.0);
 		
@@ -13,7 +14,7 @@ public class TesteSaca {
 			System.out.println("Erro: " +  e.getMessage());
 		}
 
-		System.out.println(conta.saldo);
+		System.out.println(conta.getSaldo());
 
 	}
 

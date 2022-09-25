@@ -1,3 +1,4 @@
+package modelo;
 //New ContaCorrente()
 public class ContaCorrente extends Conta implements Tributavel{
 

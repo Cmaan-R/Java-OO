@@ -1,3 +1,4 @@
+package modelo;
 //Interface == Contrato //Interface sempre é abstract
 public interface Tributavel {
 
