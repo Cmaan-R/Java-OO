@@ -1,6 +1,6 @@
-package modelo;
+package br.com.bytebank.banco.modelo;
 
-//modelo.CalculadorImposto => Full Qualified Name
+// br.com.bytebank.banco.modelo.CalculadorImposto => Full Qualified Name
 public class CalculadorImposto {
 	
 	private double totalImposto;
