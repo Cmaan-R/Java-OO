@@ -1,10 +1,12 @@
-package teste;
+package br.com.bytebank.banco.teste;
+
+import br.com.bytebank.banco.modelo.*;
 
 public class TesteSaca {
 
 	public static void main(String[] args) {
 
-		modelo.Conta conta = new modelo.ContaCorrente(123, 231);
+		Conta conta = new ContaCorrente(123, 231);
 
 		conta.deposita(200.0);
 

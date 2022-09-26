@@ -1,4 +1,4 @@
-package modelo;
+package br.com.bytebank.banco.modelo;
 //Interface == Contrato //Interface sempre é abstract
 public interface Tributavel {
 
