@@ -21,4 +21,8 @@ public class GuadadorDeContas {
 		return this.posicaoLivre;
 	}
 
+	public Conta getReferencia(int pos) {
+		return this.referencias[pos];
+	}
+
 }
