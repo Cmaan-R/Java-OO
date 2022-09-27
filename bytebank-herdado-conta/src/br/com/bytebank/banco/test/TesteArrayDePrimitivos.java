@@ -12,7 +12,7 @@ public class TesteArrayDePrimitivos {
 
 		}
 
-		for ( int i = 0 ; i < idades.length; i++) {
+		for (int i = 0; i < idades.length; i++) {
 			System.out.println(idades[i]);
 		}
 	}
