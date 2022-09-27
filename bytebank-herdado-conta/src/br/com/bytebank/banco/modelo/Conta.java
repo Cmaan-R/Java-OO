@@ -96,5 +96,11 @@ public abstract class Conta extends Object {
 	public static int getTotal() {
 		return Conta.total;
 	}
+	
+	@Override
+	public String toString() {
+
+		return "Numero :" + this.numero;
+	}
 
 }
