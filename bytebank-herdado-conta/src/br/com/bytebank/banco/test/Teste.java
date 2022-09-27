@@ -18,7 +18,7 @@ public class Teste {
 		int tamanho = guadador.getQuantidaDeElementos();
 		System.out.println(tamanho);
 		
-		Conta ref = guadador.getReferencia(0);
+		Conta ref = guadador.getReferencia(1);
 		System.out.println(ref.getNumero());
 	}
 
