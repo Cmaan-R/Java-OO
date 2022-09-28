@@ -9,7 +9,10 @@ public class Teste {
 
 	public static void main(String[] args) {
 
+		// Generics
 		ArrayList<Conta> lista = new ArrayList<Conta>();
+
+		ArrayList<String> nomes = new ArrayList<String>();
 
 		Conta cc = new ContaCorrente(22, 11);
 		lista.add(cc);
@@ -31,7 +34,7 @@ public class Teste {
 		lista.add(cc3);
 
 		Conta cc4 = new ContaCorrente(33, 322);
-		lista.add(cc2);
+		lista.add(cc4);
 
 		for (int i = 0; i < lista.size(); i++) {
 			Object oRef = lista.get(i);
