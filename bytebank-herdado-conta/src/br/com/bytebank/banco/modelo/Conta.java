@@ -97,7 +97,11 @@ public abstract class Conta extends Object {
 		return Conta.total;
 	}
 	
-	public boolean ehIgual(Conta outra) {
+	@Override
+	public boolean equals(Object ref) {
+		
+		Conta outra = (Conta) ref;
+		
 		if(this.agencia != outra.agencia) {
 			return false;
 		}
