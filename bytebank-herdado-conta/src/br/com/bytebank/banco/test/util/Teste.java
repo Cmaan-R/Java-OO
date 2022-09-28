@@ -2,6 +2,7 @@ package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
 
+import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
@@ -11,8 +12,9 @@ public class Teste {
 
 		ArrayList lista = new ArrayList();
 
-		Conta cc = new ContaCorrente(22, 11);
-		lista.add(cc);
+//		Conta cc = new ContaCorrente(22, 11);
+		Cliente cliente = new Cliente();
+		lista.add(cliente);
 
 		Conta cc2 = new ContaCorrente(22, 22);
 		lista.add(cc2);
@@ -28,7 +30,7 @@ public class Teste {
 		System.out.println("Tamanho: " + lista.size());
 		
 		Conta cc3 = new ContaCorrente(33, 311);
-		lista.add(cc);
+		lista.add(cc3);
 
 		Conta cc4 = new ContaCorrente(33, 322);
 		lista.add(cc2);
