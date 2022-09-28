@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
@@ -9,10 +10,13 @@ public class TesteArrayListEquals {
 
 	public static void main(String[] args) {
 
-		// Generics
-		ArrayList<Conta> lista = new ArrayList<Conta>();
+//		Conta cc1 = new ContaCorrente(22 , 11);
+//		Conta cc2 = new ContaCorrente(22 , 11);
+//		
+//		boolean igual = cc1.ehIgual(cc2);
+//		System.out.println(igual);
 
-		ArrayList<String> nomes = new ArrayList<String>();
+		ArrayList<Conta> lista = new ArrayList<Conta>();
 
 		Conta cc = new ContaCorrente(22, 11);
 		lista.add(cc);
@@ -20,28 +24,17 @@ public class TesteArrayListEquals {
 		Conta cc2 = new ContaCorrente(22, 22);
 		lista.add(cc2);
 
-		System.out.println("Tamanho: " + lista.size());
+		Conta cc3 = new ContaCorrente(22, 22);
 
-		Conta ref = lista.get(0);
+		boolean existe = lista.contains(cc3);
 
-		System.out.println(ref.getNumero());
+		System.out.println("Já existe? " + existe);
 
-		lista.remove(0);
-
-		System.out.println("Tamanho: " + lista.size());
-
-		Conta cc3 = new ContaCorrente(33, 311);
-		lista.add(cc3);
-
-		Conta cc4 = new ContaCorrente(33, 322);
-		lista.add(cc4);
-
-		for (int i = 0; i < lista.size(); i++) {
-			Object oRef = lista.get(i);
-			System.out.println(oRef);
+		for (Conta conta : lista) {
+			if (conta.equals(cc3)) {
+				System.out.println("Já Existe Essa Referência");
+			}
 		}
-
-		System.out.println("--------------------------------------");
 
 		for (Conta conta : lista) {
 			System.out.println(conta);
