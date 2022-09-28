@@ -96,6 +96,17 @@ public abstract class Conta extends Object {
 	public static int getTotal() {
 		return Conta.total;
 	}
+	
+	public boolean ehIgual(Conta outra) {
+		if(this.agencia != outra.agencia) {
+			return false;
+		}
+		if (this.numero != outra.numero) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 	@Override
 	public String toString() {
