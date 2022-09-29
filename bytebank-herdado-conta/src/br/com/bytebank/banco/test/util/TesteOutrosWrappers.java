@@ -9,7 +9,7 @@ public class TesteOutrosWrappers {
 
 		Integer idadeRef = Integer.valueOf(29); // Autoboxing
 		System.out.println(idadeRef.intValue()); // Unboxing
-
+		
 		Double dRef = Double.valueOf(3.2); // Autoboxing
 		System.out.println(dRef.doubleValue()); // Unboxing
 
