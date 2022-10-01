@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteOrdenacao {
 
 	public static void main(String[] args) {
 
@@ -43,31 +44,55 @@ public class Teste {
 		lista.add(cc3);
 		lista.add(cc4);
 
-		lista.sort(new Comparator<Conta>() { // Classe Anonima
+		for (Conta conta : lista) {
+			System.out.println(conta);
+		}
 
-			@Override
-			public int compare(Conta c1, Conta c2) {
-				return Integer.compare(c1.getNumero(), c2.getNumero());
+//		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+		lista.sort(null);
 
-			}
-		});
+//		Collections.sort(lista , new NumeroDaContaComparator());
+//		Collections.sort(lista);
+//		Collections.reverse(lista);
 
-		Comparator<Conta> comp = new Comparator<Conta>() {
-
-			@Override
-			public int compare(Conta c1, Conta c2) {
-
-				String nomeC1 = c1.getTitular().getNome();
-				String nomeC2 = c2.getTitular().getNome();
-
-				nomeC1.compareTo(nomeC2);
-
-				return 0;
-			}
-		};
+		System.out.println();
 
 		for (Conta conta : lista) {
 			System.out.println(conta);
 		}
+
 	}
+}
+
+class TitularDaContaComparator implements Comparator<Conta> {
+
+	@Override
+	public int compare(Conta c1, Conta c2) {
+
+		String nomeC1 = c1.getTitular().getNome();
+		String nomeC2 = c2.getTitular().getNome();
+
+		nomeC1.compareTo(nomeC2);
+
+		return 0;
+	}
+
+}
+
+class NumeroDaContaComparator implements Comparator<Conta> {
+
+	@Override
+	public int compare(Conta c1, Conta c2) {
+
+		if (c1.getNumero() < c2.getNumero()) {
+			return -345;
+		}
+
+		if (c1.getNumero() > c2.getNumero()) {
+			return 1;
+		}
+
+		return 0;
+	}
+
 }
