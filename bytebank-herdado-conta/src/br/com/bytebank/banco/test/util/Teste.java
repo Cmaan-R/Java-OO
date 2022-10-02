@@ -57,6 +57,8 @@ public class Teste {
 
 		};
 
+		lista.sort(comp);
+
 		lista.forEach((c1) -> System.out.println(c1 + ", " + c1.getTitular().getNome()));
 
 	}
