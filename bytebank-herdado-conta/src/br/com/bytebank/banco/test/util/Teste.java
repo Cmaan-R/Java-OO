@@ -3,6 +3,7 @@ package br.com.bytebank.banco.test.util;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
@@ -43,31 +44,20 @@ public class Teste {
 		lista.add(cc3);
 		lista.add(cc4);
 
-		lista.sort(new Comparator<Conta>() { // Classe Anonima
+		lista.sort((c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
 
-			@Override
-			public int compare(Conta c1, Conta c2) {
-				return Integer.compare(c1.getNumero(), c2.getNumero());
+		Comparator<Conta> comp = (Conta c1, Conta c2) -> {
 
-			}
-		});
+			String nomeC1 = c1.getTitular().getNome();
+			String nomeC2 = c2.getTitular().getNome();
 
-		Comparator<Conta> comp = new Comparator<Conta>() {
+			nomeC1.compareTo(nomeC2);
 
-			@Override
-			public int compare(Conta c1, Conta c2) {
+			return 0;
 
-				String nomeC1 = c1.getTitular().getNome();
-				String nomeC2 = c2.getTitular().getNome();
-
-				nomeC1.compareTo(nomeC2);
-
-				return 0;
-			}
 		};
 
-		for (Conta conta : lista) {
-			System.out.println(conta);
-		}
+		lista.forEach((c1) -> System.out.println(c1 + ", " + c1.getTitular().getNome()));
+
 	}
 }
