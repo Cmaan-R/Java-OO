@@ -14,7 +14,7 @@ public class TesteDeSerializacao {
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("cc.bin"));
 		ContaCorrente cc = (ContaCorrente) ois.readObject();
 		ois.close();
-		
+
 		System.out.println(cc.getSaldo());
 		System.out.println(cc.getTitular());
 
