@@ -9,7 +9,7 @@ import java.io.Serializable;
  *
  */
 
-public abstract class Conta extends Object implements Comparable<Conta>, Serializable{
+public abstract class Conta extends Object implements Comparable<Conta>, Serializable {
 
 	protected double saldo;
 	private int agencia;
@@ -113,10 +113,10 @@ public abstract class Conta extends Object implements Comparable<Conta>, Seriali
 			return true;
 		}
 	}
-	
+
 	@Override
 	public int compareTo(Conta outra) {
-		return Double.compare(this.saldo, outra.saldo);	
+		return Double.compare(this.saldo, outra.saldo);
 	}
 
 	@Override
